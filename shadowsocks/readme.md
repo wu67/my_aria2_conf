@@ -15,9 +15,7 @@ cd shadowsocks-libev
 
 编译安装
 ```
-./configure
-make
-make install
+./configure && make && make install
 ```
 
 
