@@ -23,10 +23,11 @@ cd shadowsocks-libev
 
 - fast_open 参数可选，opvz架构的vps应去除该参数，因为不支持
 - 仅为实例，自行修改参数
+- 配置文件放在```/etc/shadowsocks```
 
 ```
 {
-    "server": "0.0.0.0",
+    "server":["[::0]", "0.0.0.0"],
     "server_port": 12345,
     "password": "1234567890",
     "timeout": 120,
@@ -43,4 +44,3 @@ cd shadowsocks-libev
 
 
 ## [net-speeder](https://github.com/snooda/net-speeder)
-
