@@ -25,7 +25,7 @@
 aria2c -D
 ```
 - 推荐写进 shell 脚本(例如本项目的 aria2.sh)，并将它添加到开机启动项
-- 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`,配置文件路径自行替换
+- 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`
 - 至于 Windows 用户， 可以看看[这个说明](https://github.com/acgotaku/BaiduExporter/tree/master/aria2c)
 
 ## Aria2 控制界面，个人推荐使用[YAAW](http://binux.github.io/yaaw/demo/)
@@ -33,7 +33,7 @@ aria2c -D
 ## 浏览器扩展
 在浏览器里安装扩展以快速添加下载链接到 Aria2
 
-- Firefox 可以用 [send-to-aria2](https://addons.mozilla.org/zh-CN/firefox/addon/send-to-aria2/aria2.md)
+- Firefox 可以用 [send-to-aria2](https://addons.mozilla.org/zh-CN/firefox/addon/send-to-aria2)
 - Chrome 可以用 [YAAW for Chrome](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
 
 ###### 最后说一下
