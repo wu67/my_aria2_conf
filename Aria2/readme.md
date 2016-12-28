@@ -1,5 +1,5 @@
 # [Aria2](https://github.com/aria2/aria2) 的配置
-按自己的想法稍微'优化'了一下参数，伪装成了 utorrent-1.8.7 的 UA，添加了一些 tracker。
+按自己的想法稍微'优化'了一下参数，伪装成了 uTorrentMac Ver.1.8.7 的 UA，添加了一些 tracker。
 完成此配置时，aira2 的版本号为 1.29.0，请自行测试在更低版本上能否正常运行，理论上应该从版本号 1.18.4 开始都可以正常使用的
 
 注意事项:
@@ -17,8 +17,8 @@
 ## 安装 Aria2
 在 Mac OS 下推荐用 `brew install aira2` 安装，其他平台请自行判断；可以从[这里](https://github.com/aria2/aria2)获取可执行文件和源码。
 
-## 配置文件的路径
-在 Mac OS / *nix 系统下推荐的路径为 `~/.aria2/aria2.conf`
+## 配置文件存放的路径
+在 Mac OS / *nix 系统下推荐的存放路径为 `~/.aria2/aria2.conf`
 
 ## 启动
 ```bash
@@ -31,7 +31,7 @@ aria2c -D
 ## Aria2 控制界面，个人推荐使用[YAAW](http://binux.github.io/yaaw/demo/)
 
 ## 浏览器扩展
-在浏览器里安装扩展以快速添加下载链接到 Aria2
+在浏览器里安装扩展以便快速添加下载链接到 Aria2
 
 - Firefox 可以用 [send-to-aria2](https://addons.mozilla.org/zh-CN/firefox/addon/send-to-aria2)
 - Chrome 可以用 [YAAW for Chrome](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
@@ -39,4 +39,4 @@ aria2c -D
 ###### 最后说一下
 配置里的很多 tracker 是从各个动漫 BT 站的种子上 copy 下来的
 
-另外, 配置里的大部分 ip tracker 使用了 [@ngosang](https://github.com/ngosang) 的 [trackerslist](https://github.com/ngosang/trackerslist) 项目里提供的 tracker 
+另外, 配置里的大部分 tracker 使用了 [@ngosang](https://github.com/ngosang) 的 [trackerslist](https://github.com/ngosang/trackerslist) 项目里提供的 tracker 
