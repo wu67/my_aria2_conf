@@ -53,6 +53,9 @@ git config --global user.email "abcd@gmail.com"
 git config user.name "abcd"
 git config user.email "abcd@gmail.com"
 
+// 全局代理，国内有些地区访问 Github 实在是慢得过分
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 // 创建一个新文件 .gitignore ，并添加以下内容，这样全部 git 仓库将会忽略以下内容所提及的文件
 .DS_Store
