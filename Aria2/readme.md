@@ -39,7 +39,7 @@ aria2c -D
 
 ###### 引用说明
 配置里大部分 tracker 使用了 [@ngosang](https://github.com/ngosang) 的 [trackerslist](https://github.com/ngosang/trackerslist) 项目里提供的 tracker，
-有小部分 tracker 是从各个动漫 BT 站的种子上 copy 下来的
+有部分 tracker 是从各个动漫 BT 站的种子上 copy 下来的
 
 ## 多线程下载百度云盘的资源(测试功能)，不喜欢折腾的别往下看了
 **要求会获取文件的下载直链，可以用油猴脚本或者抓包** 
@@ -47,12 +47,13 @@ aria2c -D
 推荐抓包，只要百度云还提供下载服务，那么抓包的方法就不会失效，而油猴脚本有可能被河蟹
 
 ### `generateOrder.js`参数说明
-domainArr 数组保存的是百度盘的域名，当前数量共27，即最多能开到27线程。另外也可以将域名替换为解析后的IP，因为一个域名可能有几个IP，选择你的网络下比较快的那个
-`generateOrder.js`代码里需要更改的参数有：    
+domainArr 数组保存的是百度盘的域名，当前数量共22，即最多能开到22线程。另外也可以将域名替换为解析后的IP，因为一个域名可能有几个IP，选择你的网络下比较快的那个
+`generateOrder.js`代码里需要更改的参数有：
+
 - u 这是度盘文件真实下载地址(直链)，抓包获得，或者用脚本导出直链；最好是 HTTPS
 - cPath 这是aria2配置文件的路径。    
     项目里有提供一个示例`bdy.conf`，仅供下载百度云文件使用；因为百度单线程速度和服务器连接数貌似有上限，用aria2.conf的话有可能会被拒绝连接
-- sNum 这是要生成的 aria2 下载命令的线程数。要求**不大于**(domainArr.length-5)    
+- sNum 这是要生成的 aria2 下载命令的线程数。要求**不大于**domainArr.length    
     生成的链接数比线程数多，作为预备链接，因为可能有请求失败的链接
 
 ### 用法

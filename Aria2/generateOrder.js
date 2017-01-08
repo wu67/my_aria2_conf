@@ -21,14 +21,9 @@ var u = "https://*********",
         "scheduler.dcdn.baidu.com",
         "qdcu01.baidupcs.com",
         "d1.baidupcs.com",
-        "d2.baidupcs.com",
         "d3.baidupcs.com",
-        "d4.baidupcs.com",
-        "d5.baidupcs.com",
         "d6.baidupcs.com",
-        "d7.baidupcs.com",
-        "d8.baidupcs.com",
-        "d9.baidupcs.com"
+        "d7.baidupcs.com"
     ];
 
 function generateOrder(originURL, splitNum, confPath) {
@@ -36,8 +31,7 @@ function generateOrder(originURL, splitNum, confPath) {
         URLHead = " \"https://",
         webFilePath = originURL.split(/^http.*baidupcs.com/)[1];
 
-    // 链接数比线程数多，作为预备链接，因为可能有请求失败的链接
-    for (var i = 0; i < splitNum + 5; i++) {
+    for (var i = 0; i < splitNum; i++) {
         aOrder = aOrder + URLHead + domainArr[i] + webFilePath + "\"";
     }
 
