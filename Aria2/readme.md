@@ -1,13 +1,12 @@
 # [Aria2](https://github.com/aria2/aria2) 的配置
-按自己的想法稍微'优化'了一下参数，伪装成了 uTorrentMac Ver.1.8.7 的 UA，添加了一些 tracker。     
+自用配置。伪装成了 uTorrentMac Ver.1.8.7 的 UA(提供了几个，可自行修改)，添加了一些 tracker。     
 完成此配置时，aira2 的版本号为 1.29.0，请自行测试在更低版本上能否正常运行，理论上从版本号 1.18.4 开始都能正常使用
 
 注意事项:
 
-1. PT 用户请务必把`bt-enable-lpd enable-dht enable-peer-exchange`这三个参数的值设置为`false`，并自行修改(增加)你的 tracker
-1. BT 用户可以直接用了，影响不是很大，当然也可以修改 tracker
-1. 加密参数 bt-require-crypto 等 保留默认了，国内不少人做种都不开加密，强制加密之后，不少种子的下载速度慢得感人
-1. BT/PT 下载不保存种子，如果想保存，自行在配置文件里增加一行：`bt-save-metadata=true`
+1. 对于 PT 用户, `enable-dht bt-enable-lpd enable-peer-exchange`参数是否应该开启还存在争议，建议设置为`false`
+1. 加密参数 bt-require-crypto 等 保留软件的默认值了，强制加密之后，许多磁力链根本连种子都获取不到
+1. BT/PT 下载不保存种子，如果想保存，把`bt-save-metadata=true`前的#去掉
 1. 文件预分配参数`file-allocation`为不预分配(none)，可自行修改,[参数参考](https://aria2.github.io/manual/en/html/aria2c.html#cmdoption--file-allocation)
 1. 如果你不知道前几项在说什么，大可**不必在意**，直接**看后面的**即可
 1. **重点** 配置里需要自己修改的参数如下:

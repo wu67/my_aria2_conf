@@ -1,6 +1,6 @@
 var u = "https://*********",
     cPath = "/Users/wk/.aria2/bdy.conf",
-    sNum = 16,
+    sNum = 22,
     domainArr = [
         "allall01.baidupcs.com",
         "nj01ct01.baidupcs.com",
