@@ -1,4 +1,4 @@
-var u = "https://*********",
+let u = "https://*********",
     cPath = "/Users/wk/.aria2/bdy.conf",
     sNum = 22,
     domainArr = [
@@ -24,14 +24,14 @@ var u = "https://*********",
         "d3.baidupcs.com",
         "d6.baidupcs.com",
         "d7.baidupcs.com"
-    ];
+    ]
 
 function generateOrder(originURL, splitNum, confPath) {
-    var aOrder = "aria2c --conf-path=\"" + confPath.toString() + "\" -s " + splitNum,
+    let aOrder = "aria2c --conf-path=\"" + confPath.toString() + "\" -s " + splitNum,
         URLHead = " \"https://",
         webFilePath = originURL.split(/^http.*baidupcs.com/)[1];
 
-    for (var i = 0; i < splitNum; i++) {
+    for (let i = 0; i < splitNum; i++) {
         aOrder = aOrder + URLHead + domainArr[i] + webFilePath + "\"";
     }
 
