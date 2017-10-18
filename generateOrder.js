@@ -1,4 +1,4 @@
-let fileURL = "https://**********",
+let fileURL = "https://*******",
     confPath = '/Users/wk/.aria2/bdy.conf',
     connectionNum = 31,
     domainArr = [
@@ -38,7 +38,7 @@ let fileURL = "https://**********",
 (function (originURL, splitNum, confPath) {
     let ariaOrder = `aria2c --conf-path=\"${confPath}\" -s ${splitNum}`,
         URLHead = ' \"https://',
-        webFilePath = originURL.split(/^http.*baidupcs.com/)[1].split(/&bflag/)[0];
+        webFilePath = originURL.split(/^http.*baidupcs.com/)[1];
 
     for (let i = 0; i < splitNum; i++) {
         ariaOrder = ariaOrder + URLHead + domainArr[i] + webFilePath + '\"';
