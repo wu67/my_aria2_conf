@@ -6,11 +6,11 @@
 
 1. 对于 PT 用户, `enable-dht bt-enable-lpd enable-peer-exchange`参数是否应该开启还存在争议，建议设置为`false`
 1. 加密参数 bt-require-crypto 等 保留软件的默认值了，强制加密之后，许多磁力链根本连种子都获取不到
-1. BT/PT 下载不保存种子，如果想保存，把`bt-save-metadata=true`前的#去掉
+1. BT/PT 下载默认保存种子，如果不想保存，在`bt-save-metadata=true`前加`#`
 1. 文件预分配参数`file-allocation`为不预分配(none)，可自行修改,[参数参考](https://aria2.github.io/manual/en/html/aria2c.html#cmdoption--file-allocation)
 1. 如果你不知道前几项在说什么，大可**不必在意**，直接**看后面的**即可
 1. **重点** 配置里需要自己修改的参数如下:
-    - `dir`为下载文件的保存路径，例如我的`dir=/Users/wk/Downloads`
+    - `dir`为下载文件的保存路径，例如我的`dir=${HOME}/Downloads`。
     - `rpc-secret`为一个可选的口令(推荐使用，非必选，已在行首加#注释)，如果设置了`rpc-secret=12345`, 那么在一些控制界面和浏览器扩展中:
         + **默认** 的 JSON-RPC Path 应该设为 `http://token:12345@127.0.0.1:6800/jsonrpc`
         + **如果** 能分别设置`JSON-RPC Path`和`rpc-secret`，JSON-RPC Path 应设置为 `http://127.0.0.1:6800/jsonrpc`，rpc-secret 直接填
