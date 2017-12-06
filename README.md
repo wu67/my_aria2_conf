@@ -1,5 +1,5 @@
 # [Aria2](https://github.com/aria2/aria2) 的配置
-自用配置。伪装UA(提供了几个，可自行修改)，添加了一些`tracker`以适用BT下载。
+自用配置。伪装UA(提供了几个，可自行修改)，添加了一些`tracker`以适用BT下载。
 当前配置适用于 aira2 1.33.0 ↑，理论上低于此版本号会有点小问题，例如peer-agent
 
 注意事项:
@@ -23,7 +23,7 @@
 在 Mac OS 下推荐用 `brew install aira2` 安装，其他平台请自行判断；[获取源码/可执行文件](https://github.com/aria2/aria2)。
 
 ## 配置文件存放的路径
-在 Mac OS / *nix 系统下推荐的存放路径为 `~/.aria2/aria2.conf`
+在 unix 系的系统中，推荐的存放路径为 `~/.aria2/aria2.conf`。Windows自行决定～
 
 ## 启动
 ```bash
@@ -33,13 +33,13 @@ aria2c -D
 - 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`
 - 至于 Windows 用户， 可以看看[这个说明](https://github.com/acgotaku/BaiduExporter/tree/master/aria2c)
 
-## Aria2 控制界面 
-- [AriaNg](https://github.com/mayswind/AriaNg)
+## Aria2 控制界面
+- [AriaNg](https://github.com/mayswind/AriaNg)
     + 频繁维护，界面清新。
-    + 不过当前作者貌似主要经历放在维护上面， 没有chrome扩展打包。坐等dalao打包
+    + 不过当前作者貌似主要精力放在维护上面， 没有chrome扩展打包。坐等dalao打包
 
 - 当前个人推荐使用[YAAW](http://binux.github.io/yaaw/demo/) [获取源码](https://github.com/binux/yaaw) [Chrome扩展](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
-    + Chrome扩展可接管浏览器下载，也可以在网页上右键加入aria2下载
+    + Chrome扩展可接管浏览器下载，也可以在网页上右键加入aria2下载
     + 占用资源比较小
     + 在 chrome 上有打包好的扩展
     + 相比 Aria2 WebUI 要简洁易用
