@@ -20,17 +20,19 @@
     - `save-session` 同上，这两个参数务必保持一致
 
 ## 安装 Aria2
-在 Mac OS 下推荐用 `brew install aira2` 安装，其他平台请自行判断；[获取源码/可执行文件](https://github.com/aria2/aria2)。
+在 Mac OS 下推荐用 `brew install aria2` 安装，其他平台请自行判断；[获取源码/可执行文件](https://github.com/aria2/aria2)。
+### Andorid
+可以在官方项目releases里获取二进制文件，然后把aria2c放到/system/bin/目录，777，然后就能调用了
 
 ## 配置文件存放的路径
-在 unix 系的系统中，推荐的存放路径为 `~/.aria2/aria2.conf`。Windows自行决定～
+在 macOS 中，推荐的存放路径为 `~/.aria2/aria2.conf`。其他平台自行决定～
 
 ## 启动
 ```bash
 aria2c -D
 ```
-- 推荐写进 shell 脚本(例如本项目的 aria2.sh)，并将它添加到开机启动项
-- 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`
+- 推荐写进 shell 脚本(例如本项目的 aria2.sh)，并将它添加到开机启动项。(安卓得把aria2c.sh丢到/system/bin/ 并且改777, 不然应该会报执行权限错误)
+- 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`。
 - 至于 Windows 用户， 可以看看[这个说明](https://github.com/acgotaku/BaiduExporter/tree/master/aria2c)
 
 ## Aria2 控制界面
