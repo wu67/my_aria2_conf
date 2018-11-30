@@ -4,7 +4,12 @@
 
 注意事项:
 
-1. 对于 PT 用户, `enable-dht bt-enable-lpd enable-peer-exchange`参数是否应该开启还存在争议，建议设置为`false`
+1. 对于 PT 用户
+
+   `enable-dht bt-enable-lpd enable-peer-exchange`参数是否应该开启还存在争议，建议设置为`false`
+
+   根据用户反馈，PT需要将`user-agent`和`peer-agent`都伪装成BT软件，可以自行修改保持两个参数一致
+   
 1. 加密参数 bt-require-crypto 等 保留软件的默认值了，强制加密之后，许多磁力链根本连种子都获取不到
 1. BT/PT 下载默认保存种子，如果不想保存，在`bt-save-metadata=true`前加`#`
 1. 文件预分配参数`file-allocation`为不预分配(none)，可自行修改,[参数参考](https://aria2.github.io/manual/en/html/aria2c.html#cmdoption--file-allocation)
@@ -35,12 +40,12 @@ aria2c -D
 - 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`。
 - 至于 Windows 用户， 可以看看[这个说明](https://github.com/acgotaku/BaiduExporter/tree/master/aria2c)
 
-## Aria2 控制界面
+## Aria2 控制界面(建议自行测试选择)
 - [AriaNg](https://github.com/mayswind/AriaNg)
     + 频繁维护，界面清新。
     + 不过当前作者貌似主要精力放在维护上面， 没有chrome扩展打包。坐等dalao打包
 
-- 当前个人推荐使用[YAAW](http://binux.github.io/yaaw/demo/) [获取源码](https://github.com/binux/yaaw) [Chrome扩展](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
+- [YAAW](http://binux.github.io/yaaw/demo/) [获取源码](https://github.com/binux/yaaw) [Chrome扩展](https://chrome.google.com/webstore/detail/yaaw-for-chrome/dennnbdlpgjgbcjfgaohdahloollfgoc)
     + Chrome扩展可接管浏览器下载，也可以在网页上右键加入aria2下载
     + 占用资源比较小
     + 在 chrome 上有打包好的扩展
@@ -67,6 +72,8 @@ aria2c -D
 有部分 tracker 是从各个动漫 BT 站的种子上 copy 下来的
 
 ## 多线程下载百度云盘的资源(测试功能)，不喜欢折腾的别往下看了
+**貌似下载难度又变大了。但是，只要能获取到正确的直接下载地址，替换域名开启多线程下载这个套路应该还是可以用的**
+
 **要求会获取文件的下载直链，可以用油猴脚本或者抓包** 
 
 推荐抓包，只要百度云还提供下载服务，那么抓包的方法就不会失效，而油猴脚本有可能被河蟹
