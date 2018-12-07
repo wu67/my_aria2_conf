@@ -1,5 +1,5 @@
 let fileURL = "https://*******",
-    confPath = '/Users/wk/.aria2/bdy.conf',
+    confPath = '/Users/wu67/.aria2/bdy.conf',
     connectionNum = 31,
     domainArr = [
         'allall01.baidupcs.com',
