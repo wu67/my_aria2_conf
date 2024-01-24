@@ -1,0 +1,10 @@
+[Unit]
+Description=Aria2 Service
+After=network.target
+
+[Service]
+User=admin
+ExecStart=/usr/bin/aria2c -D
+
+[Install]
+WantedBy=default.target

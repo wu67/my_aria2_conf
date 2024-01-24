@@ -40,6 +40,25 @@ aria2c -D
 - 如果配置文件没按本文推荐的路径放置，启动命令则为`aria2c --conf-path="*****/aria2.conf" -D`。
 - 至于 Windows 用户， 可以看看[这个说明](https://github.com/acgotaku/BaiduExporter/tree/master/aria2c)
 
+#### 开机启动
+对于Debian系列(其他应该也能用), 可以创建`/etc/systemd/system/aria2.service`, 然后把`aria2.service`的内容粘贴进去, 接着启用. 注: 用户名可以自行调整, 我用的是aws默认的admin用户
+
+```bash
+# 可能需要重新加载一下
+sudo systemctl daemon-reload
+sudo systemctl enable aria2
+```
+
+#### ftp及无本地去aria2化
+鉴于中国大陆地区无ipv4公网及各种状况导致的无bt上传流量/上传艰难, (出发点是文件共享)我已经开始采用 服务器aira2下载/上传(多倍做种)、通过ftp客户端取回文件到本地的方式了.
+
+我的服务器系统自带vsftpd, 缺的请自行安装. 通过ssh key认证身份, 配置文件为`/etc/vsftpd.conf`, 其他系统请自行查找. 
+需要修改配置文件里面的目录`local_root`, 就是对应到aria2的下载目录.
+
+```bash
+sudo systemctl restart vsftpd
+```
+
 ## Aria2 控制界面(建议自行测试选择)
 - [AriaNg](https://github.com/mayswind/AriaNg)
     + 频繁维护，界面清新。
