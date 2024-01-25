@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User=admin
-ExecStart=/usr/bin/aria2c -D
+ExecStart=/usr/bin/aria2c
 
 [Install]
 WantedBy=default.target
