@@ -89,3 +89,6 @@ sudo systemctl restart vsftpd
 ###### 引用说明
 配置里大部分 tracker 使用了 [@ngosang](https://github.com/ngosang) 的 [trackerslist](https://github.com/ngosang/trackerslist) 项目里提供的 tracker，
 有部分 tracker 是从各个动漫 BT 站的种子上 copy 下来的
+
+## 反吸血 / 反迅雷
+参考这个[项目说明](https://github.com/wu67/block_BT_vampire)
